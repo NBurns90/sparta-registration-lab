@@ -42,7 +42,7 @@ describe 'testing the demoqa registration page' do
     end
 
     it 'should have a country default of Afghanistan' do
-      expect(@driver.get_selected_country).to eq('Afghanistan')
+      expect(@driver.get_selected_country('Afghanistan')).to eq('Afghanistan')
     end
 
     it 'should accept a new country value' do

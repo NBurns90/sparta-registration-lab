@@ -8,7 +8,7 @@ class SeleniumDemoReg
   FIRST_NAME_FIELD =  'name_3_firstname'
   LAST_NAME_FIELD =  'name_3_lastname'
   MARITAL_STATUS =
-  HOBBY_STATUS =  ['dance', 'reading', 'cricket']
+  HOBBY_STATUS =  ['dance', 'reading', 'cricket ']
   COUNTRY_DROP_DOWN_LIST =  'dropdown_7'
   DOB_MONTH_DROPDOWN_LIST =  'mm_date_8'
   DOB_DAY_DROPDOWN_LIST =  'dd_date_8'
@@ -119,11 +119,11 @@ class SeleniumDemoReg
   # If you are spending too long see if anyone else has been successful
   # If no solution then a run through will happen once finished
 
-  def get_selected_country
+  def get_selected_country(country)
     select_list = @chrome_driver.find_element(:id, COUNTRY_DROP_DOWN_LIST)
     options = select_list.find_elements(:tag_name, 'option')
 
-    option
+    puts options.find_index(country)
 
   end
 
